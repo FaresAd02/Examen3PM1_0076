@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <Button
+        android:id="@+id/buttonTomarImagen"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Tomar/Cargar Imagen"
+        android:layout_below="@id/imagen"
+        />
+
+    <EditText
+        android:id="@+id/editTextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        android:inputType="number"
+        android:layout_below="@id/buttonTomarImagen"
+        />
+
+    <EditText
+        android:id="@+id/editTextDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextID"
+        android:hint="Descripcion"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/editTextPeriodista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDescripcion"
+        android:hint="Periodista" />
+
+    <include
+        android:id="@+id/reproductor"
+        layout="@layout/reproductor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPeriodista" />
+
+    <Button
+        android:id="@+id/buttonRegistrarAudio"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reproductor"
+        android:layout_centerHorizontal="true"
+        android:text="Iniciar Grabacion" />
+
+    <Button
+        android:id="@+id/butttonGuardar"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonRegistrarAudio"
+        android:layout_centerHorizontal="true"
+        android:text="Guardar" />
+
+
+</RelativeLayout>

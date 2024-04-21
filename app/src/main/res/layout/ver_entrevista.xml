@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/textViewID"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/buttonTomarImagen"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="18dp"
+        android:textSize="16sp"
+        tools:text="ID"
+        android:enabled="false"/>
+
+    <EditText
+        android:id="@+id/textViewDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewID"
+        tools:text="Descripción"
+        android:layout_marginBottom="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:enabled="false"/>
+
+    <EditText
+        android:id="@+id/textViewPeriodista"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:textSize="16sp"
+        android:layout_below="@id/textViewDescripcion"
+        tools:text="Periodista"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/buttonTomarImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewEntrevista"
+        android:layout_centerHorizontal="true"
+        tools:text="Tomar Imagen"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/eliminarBoton"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reproductor"
+        android:layout_toEndOf="@id/editarBoton"
+        tools:text="Eliminar"
+        />
+
+    <Button
+        android:id="@+id/editarBoton"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reproductor"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="16dp"
+        tools:text="Editar"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageViewEntrevista"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="140dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <include
+        android:id="@+id/reproductor"
+        layout="@layout/reproductor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewPeriodista" />
+
+</RelativeLayout>
